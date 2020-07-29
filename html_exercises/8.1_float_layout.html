@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .main-container{
+            border: 1px solid black;
+            max-width: 1500px;
+            margin: auto;
+        }
+        .container{
+            max-width: 900px;
+            /* Margin shorthand = top right bottom left*/
+            margin: 10px 300px 10px 300px;
+        }
+        .clr{
+            clear: both;
+        }
+        .box1{
+            background: orange;
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .box1 h5{
+            text-align: center;
+        }
+        .box2{
+            background: green;
+            border: 1px solid #333;
+            /* Padding shorthand = top right bottom left*/
+            padding: 10px 20px 200px 20px;
+            margin-bottom: 15px;
+            float: left;
+            width: 35%;
+        }
+        .box2 h5{
+            text-align: left;
+        }
+        .box3{
+            background: purple;
+            border: 1px solid #333;
+            /* Padding shorthand = top right bottom left*/
+            padding: 10px 20px 200px 20px;
+            margin-bottom: 15px;
+            float: right;
+            width: 63%;
+        }
+        .box3 h5{
+            text-align: right;
+        }
+        .box4{
+            background: rgb(53, 77, 116);
+            border: 1px solid #333;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .box4 h5{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="box1">
+                <h5>Header</h5>
+            </div>
+            <div class="box2">
+                <h5>Side</h5>
+            </div>
+            <div class="box3">
+                <h5>Main</h5>
+            </div>
+
+            <div class="clr"></div>
+
+            <div class="box4">
+                <h5>Footer</h5>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
