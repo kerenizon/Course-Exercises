@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9.1_buttons</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            background-color: rgb(81, 81, 163);
+        }
+        h4{
+            color: white;
+            text-align: center;
+        }
+        .all-btns{
+            max-width: 960px;
+            margin: 100px 500px auto;            
+        }
+        .btn{
+            height: 30px;
+            width: 100px;
+            margin: 30px 30px auto;
+            color: white;
+            border: 3px solid black;
+            cursor: button;
+        }        
+        .flat .register{
+            background-color: green;
+            border-color: green;
+        }
+        .flat .clear{
+            background-color: red;
+            border-color: red;
+            
+        }
+        .flat .submit{
+            background-color: rgb(33, 171, 218);
+            border-color: rgb(33, 171, 218);
+        }
+        .round *{ 
+            border-radius: 10px; 
+        }
+        .round .register{
+            background-color: orange;
+            border-color: orange;
+        }
+        .round .clear{
+            background-color: yellow;
+            border-color: yellow;
+        }
+        .round .submit{
+            background-color: grey;
+            border-color: grey;
+        }
+        .register{
+            width: 150px;
+            height: 50px;
+        }
+        .clear{
+            width: 120px;
+            height: 40px;
+        }
+        .ghost .btn{
+            background-color: transparent;           
+        }
+
+        .flat .register:hover{
+            background-color: rgb(3, 97, 3);
+        }
+        .flat .clear:hover{
+            background-color: rgb(184, 5, 5);
+        }
+        .flat .submit:hover{
+            background-color: rgb(26, 139, 177);
+        }
+        .round .register:hover{
+            background-color: rgb(168, 111, 5);
+        }
+        .round .clear:hover{
+            background-color: rgb(167, 167, 6);
+        }
+        .round .submit:hover{
+            background-color: rgb(124, 115, 115);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="all-btns">
+        <div class="flat">
+            <h4>Flat</h4>
+            <button class="register btn">Register</button>
+            <button class="clear btn">Clear</button>
+            <button class="submit btn">Submit</button>
+        </div>
+        <div class="round">
+            <h4>Round</h4>
+            <button class="register btn">Register</button>
+            <button class="clear btn">Clear</button>
+            <button class="submit btn">Submit</button>
+        </div>
+        <div class="flat ghost">
+            <h4>Flat Ghost</h4>
+            <button class="register btn">Register</button>
+            <button class="clear btn">Clear</button>
+            <button class="submit btn">Submit</button>
+        </div>
+        <div class="round ghost">
+            <h4>Round Ghost</h4>
+            <button class="register btn">Register</button>
+            <button class="clear btn">Clear</button>
+            <button class="submit btn">Submit</button>
+        </div>
+    </div>
+  
+</body>
+</html>
