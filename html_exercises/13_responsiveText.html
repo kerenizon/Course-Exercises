@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive text</title>
+    <style>
+        /* smartphones */
+        @media only screen and (max-width: 500px){
+            .container p{
+                font-size: x-small;
+            }
+        }
+
+        /* tablet */
+        @media(min-width: 501px) and (max-width: 768px){
+            .container p{
+                font-size: small;
+            }
+        }
+
+        /* normal */
+        @media(min-width: 769px) and (max-width: 1200px){
+            .container p{
+                font-size:medium;
+            }
+        }
+
+        /* widescreen */
+        @media(min-width: 1201px){
+            .container p{
+                font-size: large;
+            }
+        }
+
+         /* landscape */
+         @media(max-height: 500px){
+            .container p{
+                font-size: x-large;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero minus nemo excepturi ipsum necessitatibus, ratione itaque nulla perspiciatis illo, iste repellendus quaerat, sapiente amet nostrum temporibus aut illum cum recusandae.</p>
+    </div>
+</body>
+</html>

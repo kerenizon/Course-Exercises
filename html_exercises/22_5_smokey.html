@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transitions & smokey</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #343334;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .letters{
+            color: white;
+            font-size: 70px;
+            text-shadow: black 5px 5px 10px;
+            display: flex;
+            flex-direction: row;
+        }
+        .letter{
+            transition: all 2s;
+        }
+        .letters:hover .letter{
+            transform: translate(100%,-100%) rotate(30deg);
+            opacity: 0;
+            filter: blur(20px);
+        }
+        .letter:nth-child(2){
+            transition-delay: 0.25s;
+        }
+        .letter:nth-child(3){
+            transition-delay: 0.5s;
+        }
+        .letter:nth-child(4){
+            transition-delay: 0.75s;
+        }
+        .letter:nth-child(5){
+            transition-delay: 1s;
+        }
+        .letter:last-child{
+            transition-delay: 1.25s;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="letters">
+        <div class="letter">S</div>
+        <div class="letter">M</div>
+        <div class="letter">O</div>
+        <div class="letter">K</div>
+        <div class="letter">E</div>
+        <div class="letter">Y</div>
+    </div>
+</body>
+</html>

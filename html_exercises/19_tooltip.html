@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tooltip</title>
+    <style>
+        p{
+            text-align: left;
+            margin: 5%;
+            font-size: large;
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+        }
+        a[data-tooltip]{
+            color: rgb(172, 86, 172);
+            position: relative;
+        }
+        .tooltiptext{
+            font-size: x-small;
+            color: rgb(172, 86, 172);
+            background-color: yellow;
+            width: 100px;
+            /* visibility: hidden; */
+            position: absolute;
+            padding: 5px 5px;
+            bottom: 100%;
+            left: 20%;
+            margin-left: -60%;
+            border-radius: 8px;           
+            opacity: 0;
+            transition: opacity 0.3s; 
+        }
+        .tooltiptext::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 45%;
+            border-width: 5px;
+            border-style: solid;
+            /* separating the area to 4 triangles*/
+            border-color: yellow transparent transparent transparent;
+        }
+        a[data-tooltip]:hover .tooltiptext{
+            visibility: visible;
+            opacity: 1;
+        }
+        a[data-tooltip='odio!'] .tooltiptext{
+            left: -20%;
+        }
+    </style>
+</head>
+<body>
+    <p class="first">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit accusamus omnis est nam! Totam, quasi tempore! Commodi veniam ipsam harum, quas debitis deserunt iste atque praesentium <a href="#" data-tooltip='maxime'> maxime <span class="tooltiptext"> this is 'maxime' tooltip</span></a> dicta expedita sunt eos ipsa, nisi necessitatibus placeat, quibusdam sed quo ea vitae? Enim, cumque doloremque minima architecto dignissimos dicta, iure ea tempora facere sunt aliquam debitis esse nemo amet tenetur deserunt fuga! Nisi atque nam expedita odit nobis hic, laboriosam minima ab. Exercitationem possimus sequi amet! Omnis cum doloremque aliquid! Quos, <a href="#" data-tooltip='odio!'> odio! <span class="tooltiptext"> this is 'odio!' tooltip</span></a> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid officia porro ipsam libero blanditiis repudiandae sit voluptatum ratione beatae ipsum. Quod fuga magni labore doloremque similique culpa quaerat quasi blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti excepturi  <a href="#" data-tooltip='maxime'> maxime <span class="tooltiptext"> this is 'maxime' tooltip</span></a> nesciunt dolore laborum sunt consectetur cupiditate quidem accusamus eos, temporibus ducimus repellat nam magni ex? Corporis repellat commodi eos!
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi rem nulla non illo minima inventore incidunt consequatur porro excepturi unde, praesentium obcaecati impedit est aliquid optio perspiciatis similique. Voluptas deserunt, ea enim laboriosam quisquam molestias dolores nulla natus tempora porro culpa voluptatem sequi nihil, placeat alias expedita consequatur aperiam illum excepturi saepe adipisci sed nobis animi provident. Aliquid cum beatae quia repellat officiis placeat voluptas quas aspernatur, similique magnam delectus minus iste! Nulla alias soluta dolores expedita dolore voluptates iusto! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, repudiandae! Pariatur unde, in molestias aperiam nemo soluta? Vitae dolore dicta eius sed ad! Voluptatem quo, id corporis laborum <a href="#" data-tooltip='odio!'>odio! <span class="tooltiptext"> this is 'odio!' tooltip</span></a> aperiam
+    </p>
+
+    
+    
+</body>
+</html>

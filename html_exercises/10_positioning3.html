@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positioning3</title>
+    <style>
+        .one{
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            top: 50px;
+            left: 50px;
+            position:relative;
+            background-color: white;
+            z-index: -1;
+        }
+        .two{
+            width: 180px;
+            height: 300px;
+            border: 2px solid black;
+            top: 80px;
+            left: 80px;
+            position: absolute;
+            /* z-index: 1; */
+            background-color: white;
+        }
+        .three{
+            width: 500px;
+            height: 120px;
+            border: 2px solid black;
+            position: absolute;
+            top: 300px;
+            /* z-index: 2; */
+            background-color: white;
+        }
+        .four{
+            width: 90px;
+            height: 500px;
+            border: 2px solid black;
+            position: absolute;
+            left: 350px;
+            z-index: 1;
+            background-color: white;
+        }
+        h5{
+            text-align: left;
+            position: absolute;
+            z-index: 4;
+            color: black;
+            margin: 0px 5px
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <h5>div one</h5>
+        <div class="two">
+            <h5>div two</h5>
+        </div>
+        <div class="three">
+            <h5>div three</h5>
+        </div>
+        <div class="four">
+            <h5>div four</h5>
+        </div>
+    </div>
+
+    
+</body>
+</html>

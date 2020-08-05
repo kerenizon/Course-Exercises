@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition & navbar</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: yellow;
+        }
+        .navbar{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 5%;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            position: relative;
+            margin: 3%; 
+            padding: 1% 2%;
+            overflow: hidden;         
+        }
+        a::before{
+            content: "";
+            position: absolute;
+            border-top: 2px solid black;
+            height: 100%;
+            width: 100%;
+            padding: 0% 2%;
+            top: 0px;
+            left: 0px;
+            transition: all 1s;
+            transform: translateX(-100%);
+        }
+        a::after{
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid black;
+            height: 100%;
+            width: 100%;
+            padding: 0% 2%;
+            bottom: 0px;
+            right: 0px;
+            transition: all 1s;
+            transform: translateX(100%);
+        }
+        a:hover::before{
+            transform: translateX(0);
+        }
+        a:hover::after{
+            transform: translateX(0);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </div>
+</body>
+</html>
