@@ -1,1 +1,1 @@
-My solutions for the Pre-Course exercises
+My solutions for the course exercises
