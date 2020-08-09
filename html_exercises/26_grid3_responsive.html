@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_3</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 1rem;
+            margin: 10% 10%;
+            grid-template-areas: 
+            'header header header header'
+            'sidebar content content sidebar2'
+            'footer footer footer footer';
+        }
+        .item{
+            padding: 3rem 3rem 3rem 1rem;
+            border-radius: 10px;
+            text-align: left;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .item:first-child{
+            background-color: red;
+            grid-area: header;  
+        }
+        .item:nth-child(2){
+            background-color: blue;
+            grid-area: sidebar;
+        }
+        .item:nth-child(3){
+            background-color: green;
+            grid-area: content;
+        }
+        .item:nth-child(4){
+            background-color: purple;
+            grid-area: sidebar2;
+        }
+        .item:last-child{
+            background-color: yellow;
+            grid-area: footer;
+        }
+
+        /* Tablet */
+        @media(max-width: 768px){
+            .container{
+                grid-template-areas: 
+                'header header header header'
+                'sidebar content content content'
+                'sidebar2 sidebar2 sidebar2 sidebar2'
+                'footer footer footer footer'; 
+            }
+        }
+
+        /* Mobile */
+        @media(max-width: 500px){
+            .container{
+                grid-template-areas: 
+                'header'
+                'sidebar' 
+                'content'
+                'sidebar2'
+                'footer'; 
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">Header</div>
+        <div class="item">Sidebar</div>
+        <div class="item">Content <br> More content than we had before so this column is now quite tall</div>
+        <div class="item">Sidebar 2</div>
+        <div class="item">Footer</div>
+    </div>   
+</body>
+</html>
